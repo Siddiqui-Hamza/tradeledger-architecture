@@ -1,4 +1,4 @@
-# TradeLedger AI - System Architecture
+# TradeLedger AI
 
 TradeLedger AI is a B2B SaaS platform that automates SMS-based receipt capture and financial intelligence for specialty trade contractors. 
 

@@ -26,5 +26,6 @@ The PostgreSQL database is designed for strict data integrity and tenant isolati
 *   **Idempotent Ingestion:** The `receipts` table utilizes SHA-256 image hashes and composite unique constraints to silently drop duplicate webhook deliveries.
 *   **Multi-Tenancy:** All operational tables strictly reference the `tenants` table with cascading deletes and Row-Level Security (RLS) enabled.
 *   **State Management:** Receipts transition through a strict 10-state lifecycle (from `received` to `posted`) enforced by constraints to ensure no orphaned transactions.
+*   **Native Analytics:** Complex business logic (such as the weekly spend-by-job digest) is computed directly at the database level using advanced Postgres JSON aggregations (`jsonb_agg`, `jsonb_build_object`). This minimizes the application-layer memory footprint and optimizes webhook response latency.
 
 *Note: Vendor-specific IDs, OAuth credential columns, and proprietary RPC aggregation functions have been redacted from the public schema.*

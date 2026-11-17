@@ -12,7 +12,7 @@ This repository contains the high-level system architecture and the sanitized mu
 ## System Architecture
 The platform is built on an event-driven, Hub-and-Spoke model to handle asynchronous SMS webhooks, multi-model AI extraction, and human-in-the-loop disambiguation.
 
-![TradeLedger Architecture](./diagrams/architecture.png)
+![TradeLedger Architecture](./diagrams/tradeledger.png)
 
 ## Core Extraction Pipeline
 While this repository focuses on the database architecture, the platform's orchestration relies on:
